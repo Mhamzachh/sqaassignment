@@ -18,7 +18,7 @@ public class loginTests {
 		String password = "admin";
 		int expected = 0;
 		int response = _lg.registerUser(username, password);
-		Assert.assertEquals(0, response);
+		Assert.assertEquals(expected, response);
 	}
 	
 	@Test
@@ -28,7 +28,16 @@ public class loginTests {
 		String password = "";
 		int expected = 0;
 		int response = _lg.registerUser(username, password);
-		Assert.assertEquals(0, response);
+		Assert.assertEquals(expected, response);
+	}
+	@Test
+	public void signupComplete() {
+		login _lg = new login();
+		String username = "admin";
+		String password = "admin";
+		int expected = 1;
+		int response = _lg.registerUser(username, password);
+		Assert.assertEquals(expected, response);
 	}
 
 }
