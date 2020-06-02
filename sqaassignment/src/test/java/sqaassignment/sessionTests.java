@@ -22,5 +22,13 @@ public class sessionTests {
 		sessionManager sM = new sessionManager();
 		Assert.assertNull(sM.findSession(1));
 	}
+	@Test
+	public void sessionNonExisting() {
+		//Boundary Value test
+		sessionManager sM = new sessionManager();
+		int actual = sM.checkStatus(1);
+		
+		Assert.assertTrue(actual > 0);
+	}
 
 }
