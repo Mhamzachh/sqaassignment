@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class sessionManager {
 	
-	ArrayList<session> sessionList;
+	ArrayList<session> sessionList = new ArrayList<session>();
 	
 	public int createSession(int userId, int hours)
 	{
@@ -26,6 +26,7 @@ public class sessionManager {
 		{
 			session _sess = new session(userId, date);
 			this.sessionList.add(_sess);
+			return 1;
 		}
 		
 		return 0;

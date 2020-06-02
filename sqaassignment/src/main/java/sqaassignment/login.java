@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class login {
 	
-	ArrayList<user> userList;
+	ArrayList<user> userList = new ArrayList<user>();
 	int maxId = 1;
 
 	public int registerUser(String username, String password)

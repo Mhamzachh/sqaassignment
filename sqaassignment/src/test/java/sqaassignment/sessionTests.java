@@ -17,5 +17,10 @@ public class sessionTests {
 		int expected = 1;
 		Assert.assertEquals(expected, response);
 	}
+	@Test
+	public void sessionNull() {
+		sessionManager sM = new sessionManager();
+		Assert.assertNull(sM.findSession(1));
+	}
 
 }
